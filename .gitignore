@@ -1,0 +1,19 @@
+# Editors / IDEs
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+
+# Netlify (local)
+.netlify/
+
+# Internal notes (not for public repo)
+CLAUDE.md

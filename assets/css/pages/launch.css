@@ -1,0 +1,31 @@
+/* Launch a Software Product page */
+.lz-grid{display:grid;gap:32px;align-items:start}
+.panel{position:sticky;top:calc(env(safe-area-inset-top,0px) + 68px);z-index:4;background:var(--ink);border:1px solid var(--line-dark);border-radius:8px;padding:14px 16px;transition:top .3s var(--ease)}
+body.nav-hidden .panel{top:calc(env(safe-area-inset-top,0px) + 8px)}
+.pn-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.chip.go{background:#15803D;border-color:#15803D;color:#fff}
+.gates{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:4px}
+.gates li{font-size:0;height:6px;border-radius:3px;background:var(--line-dark);transition:background .3s var(--ease)}
+.gates li.on{background:var(--ultra)}
+.gates.all li{background:#15803D}
+.pn-foot{margin-top:10px;font:12px/1 var(--mono);color:var(--muted-dark)}
+.pillars{display:grid;gap:0}
+.pillars .h2{font-size:clamp(1.6rem,1.2rem + 1.8vw,2.6rem);margin-bottom:24px;max-width:16ch}
+.pillar{padding:28px 0;border-top:1px solid var(--line-dark);opacity:.4;transition:opacity .4s var(--ease)}
+.pillar.on{opacity:1}
+.pillar h3{margin:0;font-size:clamp(1.3rem,1.1rem + 1vw,1.9rem);letter-spacing:-.02em}
+.pillar p{margin:8px 0 0;color:var(--muted-dark);max-width:44ch}
+.outcome{margin:0;font-size:clamp(1.4rem,1.15rem + 1.3vw,2.2rem);line-height:1.25;letter-spacing:-.02em;font-weight:500;max-width:28ch}
+@media (min-width:900px){
+  .lz-grid{grid-template-columns:1fr 360px;gap:80px}
+  .panel{order:2;top:100px;padding:22px}
+  body.nav-hidden .panel{top:40px}
+  .gates{grid-template-columns:1fr;gap:0;margin-top:18px}
+  .gates li{font-size:15px;height:auto;background:none;border-top:1px solid var(--line-dark);padding:12px 0 12px 28px;position:relative;color:var(--muted-dark)}
+  .gates li::before{content:"";position:absolute;left:0;top:15px;width:14px;height:14px;border-radius:50%;border:1px solid rgba(255,255,255,.25);transition:all .3s var(--ease)}
+  .gates li.on{background:none;color:var(--paper)}
+  .gates li.on::before{background:var(--ultra);border-color:var(--ultra)}
+  .gates.all li{background:none}
+  .gates.all li::before{background:#15803D;border-color:#15803D}
+  .pillar{padding:44px 0}
+}

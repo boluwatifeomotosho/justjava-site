@@ -1,0 +1,30 @@
+/* Software Rescue page */
+.scan-wrap{margin-top:36px;display:grid;gap:24px}
+.scan{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.area{position:relative;overflow:hidden;border:1px solid var(--line-dark);border-radius:8px;padding:12px;background:var(--ink);min-height:92px;display:grid;align-content:space-between;gap:8px;transition:border-color .3s var(--ease)}
+.area b{font-size:15px;font-weight:500}
+.area small{font-size:12px;line-height:1.35;color:var(--muted-dark);opacity:0;transition:opacity .3s var(--ease)}
+.area .st{position:absolute;right:10px;top:12px;width:10px;height:10px;border-radius:50%;background:var(--line-dark);transition:background .3s var(--ease)}
+.area.scanning::after{content:"";position:absolute;left:0;right:0;top:0;height:40%;background:linear-gradient(rgba(90,202,249,0),rgba(90,202,249,.22));animation:sweep .5s linear}
+@keyframes sweep{from{transform:translateY(-100%)}to{transform:translateY(260%)}}
+.area.g{border-color:rgba(31,169,113,.6)}.area.g .st{background:#15803D}
+.area.a{border-color:rgba(245,185,74,.6)}.area.a .st{background:#F5B94A}
+.area.r{border-color:rgba(255,107,138,.6)}.area.r .st{background:#FF6B8A}
+.area.done small{opacity:1}
+.verdict{border:1px solid var(--line-dark);border-radius:8px;padding:18px;background:var(--ink)}
+.v-k{margin:0 0 12px;font:500 12px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted-dark)}
+.recs{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.recs li{font:500 13px/1 var(--mono);border:1px solid var(--line-dark);border-radius:4px;padding:8px 10px;color:var(--muted-dark);transition:all .35s var(--ease)}
+.recs.on li{opacity:.35}
+.recs.on li.pick{opacity:1;background:var(--ultra);border-color:var(--ultra);color:#fff}
+.recs.on li.pick2{opacity:1;border-color:var(--ultra);color:var(--paper)}
+.v-why{margin:16px 0 0;color:var(--muted-dark);font-size:15px;line-height:1.5}
+.v-why b{color:var(--paper);font-weight:500}
+.verdict .sbtn{margin-top:16px}
+.big-line{margin:0;font-size:clamp(1.8rem,1.2rem + 3vw,3.6rem);line-height:1.08;letter-spacing:-.03em;font-weight:700;max-width:20ch;text-wrap:balance}
+@media (min-width:900px){
+  .scan-wrap{grid-template-columns:1fr 380px;gap:32px;align-items:start}
+  .scan{grid-template-columns:repeat(5,1fr)}
+  .area{min-height:120px}
+  .verdict{position:sticky;top:120px}
+}

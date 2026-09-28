@@ -1,0 +1,11 @@
+/* Page not found page */
+.nf{padding-block:48px 96px}
+.nf-grid{display:grid;gap:40px;align-items:center}
+.nf-title{font-size:clamp(2.3rem,1.3rem + 4vw,4.6rem);max-width:14ch}
+.nf-t{max-width:440px}
+.nf-rows{margin:0;padding:4px 20px 16px}
+.nf-rows div{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--line-dark);font-size:14px}
+.nf-rows dt{font:500 11px/1.6 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted-dark)}
+.nf-rows dd{margin:0;overflow-wrap:anywhere}
+.chip.unc{border-color:#F5B94A;color:#F5B94A}
+@media (min-width:900px){ .nf{padding-block:140px 160px} .nf-grid{grid-template-columns:1.2fr 1fr;gap:80px} }

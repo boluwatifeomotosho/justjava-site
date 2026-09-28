@@ -1,0 +1,34 @@
+/* Connect Systems and Data page */
+.sim{margin-top:40px;display:grid;gap:32px}
+.sim-flow{display:grid;justify-items:stretch;max-width:420px}
+.node{position:relative;border:1px solid var(--line-dark);background:var(--ink);border-radius:8px;padding:14px 16px;display:grid;gap:2px;transition:border-color .3s var(--ease),background .3s var(--ease)}
+.node.core{border-color:var(--ultra)}
+.nd-k{font-weight:700;font-size:16px}
+.nd-v{font:12px/1.4 var(--mono);color:var(--muted-dark)}
+.node.down{border-color:#FF6B8A;background:rgba(255,107,138,.08)}
+.node.down .nd-v{color:#FF8FA6}
+.node.alert{border-color:#F5B94A}
+.q{position:absolute;right:12px;top:12px;font:500 11px/1 var(--mono);color:#F5B94A;border:1px solid #F5B94A;border-radius:4px;padding:5px 7px}
+.wire{position:relative;height:56px;margin-left:24px;width:2px;background:var(--line-dark);overflow:hidden}
+.wire i{position:absolute;left:-2px;width:6px;height:6px;border-radius:50%;background:var(--maya);top:-8px;animation:pulse 1.8s linear infinite}
+.wire i:nth-child(2){animation-delay:.6s}.wire i:nth-child(3){animation-delay:1.2s}
+@keyframes pulse{to{transform:translateY(72px)}}
+.wire.stop i{animation-play-state:paused;opacity:0}
+.wire.stop{background:repeating-linear-gradient(to bottom,#FF6B8A 0 4px,transparent 4px 8px)}
+.wire.dup i{background:#F5B94A}
+.paused .wire i{animation-play-state:paused}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.stats b{display:block;position:relative;overflow:hidden;height:30px;font-size:26px;line-height:30px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.stats small{display:block;font-size:11px;line-height:1.3;color:var(--muted-dark);margin-top:4px}
+.stats .lost{color:var(--maya)}
+.sim-btns{display:grid;gap:8px;margin-top:20px}
+.log{list-style:none;margin:20px 0 0;padding:14px 16px;border-radius:8px;background:#050B20;border:1px solid var(--line-dark);font:12px/1.55 var(--mono);color:var(--muted-dark);height:196px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;gap:2px}
+.log li{animation:settle .3s var(--ease)}
+.log li b{font-weight:500;color:var(--paper)}
+.log li.bad b{color:#FF8FA6}.log li.warn b{color:#F5B94A}.log li.ok b{color:var(--maya)}
+@keyframes settle{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+@media (min-width:900px){
+  .sim{grid-template-columns:420px 1fr;gap:64px;align-items:start}
+  .wire{height:72px}
+  @keyframes pulse{to{transform:translateY(88px)}}
+}

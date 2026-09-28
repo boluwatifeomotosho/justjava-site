@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HR and Payroll Platform | JustJava</title>
+<meta name="description" content="From HR expertise to a complete workforce platform, available to license.">
+<link rel="canonical" href="https://www.justjava.tech/hr-payroll.html">
+<meta name="theme-color" content="#070F29">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="JustJava">
+<meta property="og:title" content="HR and Payroll Platform | JustJava">
+<meta property="og:description" content="From HR expertise to a complete workforce platform, available to license.">
+<meta property="og:url" content="https://www.justjava.tech/hr-payroll.html">
+<!-- TODO: add a 1200x630 social image at assets/img/og.png, then uncomment -->
+<!-- <meta property="og:image" content="https://www.justjava.tech/assets/img/og.png"> -->
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/brand/justjava-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preload" href="assets/fonts/creato-display-bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/pages/hr-payroll.css">
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/pages/hr-payroll.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#top">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="wordmark" href="index.html"><img class="logo" src="assets/brand/justjava-wordmark-white.svg" width="110" height="28" alt="JustJava"></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="solutions.html">Solutions</a><a href="products.html" aria-current="page">Products</a><a href="standard.html">The JustJava Standard</a><a href="case-studies.html">Case Studies</a><a href="corecare.html">CoreCare</a><a href="about.html">About</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn-sm" href="contact.html">Discuss</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="sheet"><span class="bar b1"></span><span class="bar b2"></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="sheet" id="sheet" aria-label="Menu">
+  <nav>
+    <a href="solutions.html" style="--i:0">Solutions <i>→</i></a><a href="products.html" style="--i:1">Products <i>→</i></a><a href="standard.html" style="--i:2">The JustJava Standard <i>→</i></a><a href="case-studies.html" style="--i:3">Case Studies <i>→</i></a><a href="corecare.html" style="--i:4">CoreCare <i>→</i></a><a href="about.html" style="--i:5">About <i>→</i></a>
+  </nav>
+  <a class="btn" href="contact.html">Discuss a Project</a>
+  <p class="sheet-sig">UNDERSTAND · ENGINEER · PROVE · OPERATE</p>
+</div>
+
+<main id="top" tabindex="-1">
+  <section class="sol-hero">
+    <div class="wrap">
+      <p class="eyebrow">Products · HR &amp; Payroll</p>
+      <h1 class="display sol-title">From HR expertise to a complete workforce platform.</h1>
+      <p class="lede">Turning real HR and payroll operations into one configurable software product.</p>
+      <div class="chips hr-chips"><span>Enterprise Software</span><span>HR &amp; Payroll</span><span>Built by JustJava</span><span class="lic">Available to License</span></div>
+      <div class="actions hr-act"><a class="btn" href="contact.html">Request a Product Demo</a><a class="link-arrow" href="contact.html">Discuss Deployment <i>→</i></a></div>
+    </div>
+  </section>
+  <section class="sol-demo" id="demo">
+    <div class="wrap">
+      <div class="demo-head"><h2 class="h2">Run a month's payroll.</h2><span class="demo-tag">Illustrative figures</span></div>
+      <div class="pr">
+        <ol class="pr-steps" id="prSteps">
+          <li>Collect inputs<small>Attendance, overtime, leave</small></li>
+          <li>Calculate gross pay<small>Grades, allowances, overtime rules</small></li>
+          <li>Statutory deductions<small>PAYE, pension, NHF</small></li>
+          <li>Approval<small>HR lead signs off</small></li>
+          <li>Payslips and bank file<small>Generated, not re-typed</small></li>
+        </ol>
+        <div class="pr-panel">
+          <div class="pr-top"><span class="t-id">Payroll run · March</span><span class="chip" id="prChip"><span>DRAFT</span></span></div>
+          <div class="pr-emp"><b id="prN">0</b><span>of 312 employees processed</span></div>
+          <div class="pr-bar"><i id="prBar"></i></div>
+          <dl class="pr-tot">
+            <div><dt>Gross pay</dt><dd id="tG">₦0</dd></div>
+            <div><dt>Deductions</dt><dd id="tD">₦0</dd></div>
+            <div><dt>Net pay</dt><dd id="tN">₦0</dd></div>
+          </dl>
+          <button class="btn pr-approve" id="prApprove" hidden>Approve as HR lead</button>
+          <p class="pr-msg" id="prMsg" aria-live="polite">&nbsp;</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sol-body hr-body">
+    <div class="wrap">
+      <div class="hr-sec"><p class="eyebrow">The situation</p><p>Workforce administration typically fragments across payroll spreadsheets, employee records in one system, approvals in email and reporting reconstructed at month-end. The result is duplicated work and thin management visibility.</p></div>
+      <div class="hr-sec"><p class="eyebrow">Why it mattered</p><p>Growing organisations need one place where employee data, payroll, workflows and management reporting behave as a single operation rather than a collection of documents.</p></div>
+      <div class="hr-sec"><p class="eyebrow">The engineering challenge</p><p>Not building screens. Building a configurable platform that qualifying organisations can adopt without the vendor rewriting the software each time policy, calculations or reporting requirements change.</p></div>
+      <div class="hr-sec"><p class="eyebrow">What the platform covers</p><div class="capchips"><span>Employee administration</span><span>Payroll</span><span>Workflows &amp; approvals</span><span>Reporting</span><span>Configuration</span><span>Integrations</span></div></div>
+    </div>
+  </section>
+  <section class="sec light hr-own">
+    <div class="wrap">
+      <h2 class="h2">Want the platform itself?</h2>
+      <div class="copy"><p>The platform is available to qualifying organisations that want to adopt an existing HR and payroll foundation rather than commission an entirely new system.</p></div>
+      <div class="actions hr-act"><a class="btn" href="contact.html">Request a Product Demo</a><a class="link-arrow" href="contact.html" style="color:var(--ink)">Discuss Deployment <i>→</i></a></div>
+    </div>
+  </section>
+  <section class="cta sol-cta"><div class="wrap"><div><h2 class="h2">Have software that needs to be done properly?</h2><p class="body">Tell us what the business is trying to achieve. You do not need to arrive with a technical specification. If the opportunity is a good fit, we will help turn the business requirement into an engineering problem we can solve.</p><div class="actions"><a class="btn" href="contact.html">Request a Product Demo</a></div><p class="note">We review the context before the first serious conversation.</p></div></div></section>
+</main>
+
+<footer class="footer">
+    <div class="wrap">
+      <div style="display:grid;gap:16px;align-content:start"><a class="wordmark" href="index.html"><img class="logo" src="assets/brand/justjava-wordmark-white.svg" width="110" height="28" alt="JustJava"></a><span class="sig">UNDERSTAND · ENGINEER · PROVE · OPERATE</span></div>
+      <div style="display:grid;gap:32px">
+        <div class="fcols">
+          <div><h3>Engineering</h3><a href="solutions.html">Solutions</a><a href="products.html">Products</a><a href="hr-payroll.html">HR &amp; Payroll Platform</a><a href="standard.html">The JustJava Standard</a><a href="case-studies.html">Case Studies</a><a href="corecare.html">CoreCare</a></div>
+          <div><h3>Company</h3><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+        </div>
+        <div class="legal"><span>© 2026 JustJava</span></div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

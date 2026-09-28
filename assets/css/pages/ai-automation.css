@@ -1,0 +1,38 @@
+/* AI Automation page */
+.sorter{margin-top:40px;display:grid;gap:24px}
+.intake{background:var(--ink);border:1px solid var(--line-dark);border-radius:8px;padding:16px;display:grid;gap:12px}
+.in-top{display:flex;justify-content:space-between;align-items:center}
+.in-count{font:12px/1 var(--mono);color:var(--muted-dark)}
+.in-card{border:1px solid var(--ultra);border-radius:6px;padding:14px;display:grid;gap:10px;min-height:118px}
+.in-card.go{animation:slideout .45s var(--ease) forwards}
+@keyframes slideout{to{transform:translateY(12px);opacity:0}}
+.in-card.new{animation:slidein .35s var(--ease)}
+@keyframes slidein{from{transform:translateY(-10px);opacity:0}to{transform:none;opacity:1}}
+.in-name{margin:0;font-weight:500;font-size:16px;line-height:1.35}
+.conf{display:flex;align-items:center;gap:10px;font:500 12px/1 var(--mono);font-variant-numeric:tabular-nums}
+.conf-bar{flex:1;height:4px;border-radius:2px;background:var(--line-dark);overflow:hidden}
+.conf-bar i{display:block;height:100%;width:100%;transform-origin:left;transform:scaleX(0);background:var(--maya);transition:transform .6s var(--ease),background .3s}
+.in-why{margin:0;font-size:13px;color:var(--muted-dark);min-height:1.4em}
+.in-why.risk{color:#FF8FA6}
+.rules{margin:0;font:11px/1.5 var(--mono);color:var(--muted-dark);letter-spacing:.02em}
+.lanes{display:grid;gap:12px}
+.lane{border:1px solid var(--line-dark);border-radius:8px;padding:14px 16px;background:var(--ink)}
+.ln-head{display:flex;justify-content:space-between;align-items:center}
+.ln-head b{font:500 13px/1 var(--mono);letter-spacing:.1em}
+.lane[data-l="automate"] .ln-head b{color:var(--maya)}
+.lane[data-l="assist"] .ln-head b{color:#F5B94A}
+.lane[data-l="escalate"] .ln-head b{color:#FF8FA6}
+.ln-n{position:relative;overflow:hidden;height:22px;min-width:24px;text-align:right;font-weight:700;font-size:20px;line-height:22px}
+.ln-rule{margin:6px 0 0;font-size:14px;color:var(--muted-dark)}
+.ln-list{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px}
+.ln-list:empty{margin:0}
+.ln-list li{display:flex;justify-content:space-between;gap:10px;font-size:13px;border-top:1px solid var(--line-dark);padding-top:8px;animation:settle .35s var(--ease)}
+.ln-list li span:last-child{font:12px/1.4 var(--mono);color:var(--muted-dark);white-space:nowrap}
+@keyframes settle{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.again{margin-top:20px;width:auto}
+.sol-body .copy p{margin-top:0}
+@media (min-width:900px){
+  .sorter{grid-template-columns:360px 1fr;gap:40px;align-items:start}
+  .lanes{grid-template-columns:repeat(3,1fr);align-items:start}
+  .ln-list li{flex-direction:column;gap:2px}
+}

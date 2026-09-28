@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CoreCare | JustJava</title>
+<meta name="description" content="Your software is live. Now it has to stay reliable. JustJava production engineering after launch.">
+<link rel="canonical" href="https://www.justjava.tech/corecare.html">
+<meta name="theme-color" content="#070F29">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="JustJava">
+<meta property="og:title" content="CoreCare | JustJava">
+<meta property="og:description" content="Your software is live. Now it has to stay reliable. JustJava production engineering after launch.">
+<meta property="og:url" content="https://www.justjava.tech/corecare.html">
+<!-- TODO: add a 1200x630 social image at assets/img/og.png, then uncomment -->
+<!-- <meta property="og:image" content="https://www.justjava.tech/assets/img/og.png"> -->
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/brand/justjava-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preload" href="assets/fonts/creato-display-bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/pages/corecare.css">
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/pages/corecare.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#top">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="wordmark" href="index.html"><img class="logo" src="assets/brand/justjava-wordmark-white.svg" width="110" height="28" alt="JustJava"></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="solutions.html">Solutions</a><a href="products.html">Products</a><a href="standard.html">The JustJava Standard</a><a href="case-studies.html">Case Studies</a><a href="corecare.html" aria-current="page">CoreCare</a><a href="about.html">About</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn-sm" href="contact.html">Discuss</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="sheet"><span class="bar b1"></span><span class="bar b2"></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="sheet" id="sheet" aria-label="Menu">
+  <nav>
+    <a href="solutions.html" style="--i:0">Solutions <i>→</i></a><a href="products.html" style="--i:1">Products <i>→</i></a><a href="standard.html" style="--i:2">The JustJava Standard <i>→</i></a><a href="case-studies.html" style="--i:3">Case Studies <i>→</i></a><a href="corecare.html" style="--i:4">CoreCare <i>→</i></a><a href="about.html" style="--i:5">About <i>→</i></a>
+  </nav>
+  <a class="btn" href="contact.html">Discuss a Project</a>
+  <p class="sheet-sig">UNDERSTAND · ENGINEER · PROVE · OPERATE</p>
+</div>
+
+<main id="top" tabindex="-1">
+  <section class="sol-hero">
+    <div class="wrap">
+      <p class="eyebrow">CoreCare</p>
+      <h1 class="display sol-title">Your software is live. Now it has to stay reliable.</h1>
+      <p class="lede">CoreCare is JustJava's production engineering service for software that needs ongoing technical attention after launch.</p>
+      <p class="lede" style="margin-top:14px">Production software still changes. Dependencies age. Infrastructure evolves. Usage grows. Security requirements move. New behaviour appears under real workloads.</p>
+    </div>
+  </section>
+  <section class="sol-demo" id="demo">
+    <div class="wrap">
+      <div class="demo-head"><h2 class="h2">One night on CoreCare.</h2><span class="demo-tag">Example incident</span></div>
+      <div class="cc">
+        <div class="cc-chart">
+          <div class="cc-top"><span class="t-id">Payment API · response time (p95)</span><span class="cc-now" id="ccNow">240 ms</span></div>
+          <svg viewBox="0 0 600 220" preserveAspectRatio="none" id="ccSvg" aria-hidden="true">
+            <line x1="0" y1="176" x2="600" y2="176" class="cc-base"/>
+            <text x="596" y="170" text-anchor="end" class="cc-lbl">normal</text>
+            <path id="ccPath" d=""/>
+          </svg>
+          <div class="cc-axis"><span>01:30</span><span>02:14</span><span>02:38</span><span>03:30</span></div>
+        </div>
+        <ol class="cc-log" id="ccLog">
+          <li data-k="OBSERVE"><span class="cc-t">02:14</span><div><b>Alert fired.</b> Payment API p95 at 1.8s against a normal 240ms. On-call engineer paged.</div></li>
+          <li data-k="RESOLVE"><span class="cc-t">02:21</span><div><b>Root cause found.</b> Ledger lookups lost an index after last week's data growth.</div></li>
+          <li data-k="RESOLVE"><span class="cc-t">02:38</span><div><b>Fixed.</b> Index restored. Response time back to 230ms. No transactions lost.</div></li>
+          <li data-k="IMPROVE"><span class="cc-t">Next day</span><div><b>Made permanent.</b> A query performance check added to the release pipeline so it cannot return quietly.</div></li>
+          <li data-k="MAINTAIN"><span class="cc-t">Same window</span><div><b>Housekeeping.</b> Three outdated dependencies patched while the change window was open.</div></li>
+          <li data-k="REPORT"><span class="cc-t">09:00</span><div><b>Reported.</b> Incident summary, cause and follow-ups visible in the client platform before the working day starts.</div></li>
+        </ol>
+      </div>
+      <button class="sbtn" id="ccAgain" hidden>↻ Replay the night</button>
+    </div>
+  </section>
+  <section class="sol-body">
+    <div class="wrap">
+      <h2 class="h2">What CoreCare covers.</h2>
+      <ul class="shifts">
+        <li><h3>Observe</h3><p>Understand application health, failures, performance and important operating signals.</p></li>
+        <li><h3>Maintain</h3><p>Keep dependencies, environments and technical housekeeping under control.</p></li>
+        <li><h3>Resolve</h3><p>Investigate incidents, defects and root causes.</p></li>
+        <li><h3>Improve</h3><p>Address agreed performance issues, technical debt and operational improvements.</p></li>
+        <li><h3>Report</h3><p>See activity, risks, recommendations and relevant system information through the client platform.</p></li>
+      </ul>
+      <p class="cc-disc">CoreCare is not an unlimited feature-development retainer. Material new functionality is scoped and agreed separately.</p>
+    </div>
+  </section>
+  <section class="sec light cc-hr">
+    <div class="wrap">
+      <p class="eyebrow">Software Health Review</p>
+      <h2 class="h2">Already have software we did not build?</h2>
+      <div class="copy">
+        <p>We can take responsibility for existing software, but not blindly.</p>
+        <p>Before CoreCare begins, JustJava performs a technical health review to understand the codebase, architecture, deployment, dependencies, documentation and operational condition.</p>
+        <p class="strong">Responsible engineering starts with knowing what we are taking responsibility for.</p>
+      </div>
+    </div>
+  </section>
+  <section class="cta sol-cta"><div class="wrap"><div><h2 class="h2">Have software that needs to be done properly?</h2><p class="body">Tell us what the business is trying to achieve. You do not need to arrive with a technical specification. If the opportunity is a good fit, we will help turn the business requirement into an engineering problem we can solve.</p><div class="actions"><a class="btn" href="contact.html">Request a Software Health Review</a></div><p class="note">We review the context before the first serious conversation.</p></div></div></section>
+</main>
+
+<footer class="footer">
+    <div class="wrap">
+      <div style="display:grid;gap:16px;align-content:start"><a class="wordmark" href="index.html"><img class="logo" src="assets/brand/justjava-wordmark-white.svg" width="110" height="28" alt="JustJava"></a><span class="sig">UNDERSTAND · ENGINEER · PROVE · OPERATE</span></div>
+      <div style="display:grid;gap:32px">
+        <div class="fcols">
+          <div><h3>Engineering</h3><a href="solutions.html">Solutions</a><a href="products.html">Products</a><a href="hr-payroll.html">HR &amp; Payroll Platform</a><a href="standard.html">The JustJava Standard</a><a href="case-studies.html">Case Studies</a><a href="corecare.html">CoreCare</a></div>
+          <div><h3>Company</h3><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+        </div>
+        <div class="legal"><span>© 2026 JustJava</span></div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

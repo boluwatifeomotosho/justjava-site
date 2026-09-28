@@ -1,0 +1,9 @@
+/* Case Studies page */
+.pd{padding-block:40px 72px}
+.cs-intro{margin:0;color:var(--muted-dark);font-size:18px;max-width:44ch}
+.xsteps{list-style:none;margin:28px 0 0;padding:0;border-top:1px solid var(--line-dark)}
+.xsteps li{display:grid;grid-template-columns:44px 1fr;gap:12px;padding:20px 0;border-bottom:1px solid var(--line-dark)}
+.xsteps .n{font:500 13px/2 var(--mono);color:var(--maya)}
+.xsteps h3{margin:0;font-size:clamp(1.15rem,1.05rem + .6vw,1.45rem);letter-spacing:-.02em}
+.xsteps p{margin:6px 0 0;color:var(--muted-dark)}
+@media (min-width:900px){ .sol-body .wrap{display:grid;grid-template-columns:4fr 8fr;gap:64px} .pd{padding-block:40px 120px} }

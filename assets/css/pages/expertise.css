@@ -1,0 +1,26 @@
+/* Turn Expertise into Software page */
+.kx{margin-top:36px;display:grid;gap:12px}
+.kx-head{display:none}
+.kx-row{display:grid;gap:10px;border:1px solid var(--line-dark);border-radius:8px;padding:16px;background:var(--ink)}
+.k1{margin:0;font-size:17px;line-height:1.4;font-weight:500}
+.k2{display:block;font:13px/1.6 var(--mono);color:var(--maya);background:#050B20;border-radius:6px;padding:10px 12px;overflow-x:auto}
+.k3{margin:0;font-size:14px;color:var(--paper);display:flex;align-items:center;gap:8px}
+.k3::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--violet);flex:none}
+.kx.pre .k2,.kx.pre .k3{opacity:0;transform:translateY(6px)}
+.kx .k2,.kx .k3{transition:opacity .45s var(--ease),transform .45s var(--ease)}
+.kx.go .k2{opacity:1;transform:none;transition-delay:calc(var(--i)*400ms + 200ms)}
+.kx.go .k3{opacity:1;transform:none;transition-delay:calc(var(--i)*400ms + 650ms)}
+.kx-note{margin:24px 0 0;color:var(--muted-dark);max-width:52ch}
+.xsteps{list-style:none;margin:32px 0 0;padding:0;border-top:1px solid var(--line-dark)}
+.xsteps li{display:grid;grid-template-columns:44px 1fr;gap:12px;padding:22px 0;border-bottom:1px solid var(--line-dark)}
+.xsteps .n{font:500 13px/2 var(--mono);color:var(--maya)}
+.xsteps h3{margin:0;font-size:clamp(1.2rem,1.05rem + .8vw,1.6rem);letter-spacing:-.02em}
+.xsteps p{margin:6px 0 0;color:var(--muted-dark)}
+.seealso{margin:28px 0 0;color:var(--muted-dark)}
+.seealso a{color:var(--maya)}
+@media (min-width:900px){
+  .kx-head{display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:24px;font:500 11px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted-dark);padding:0 17px}
+  .kx-row{grid-template-columns:1fr 1.1fr 1fr;gap:24px;align-items:center;padding:18px}
+  .sol-body .wrap{display:grid;grid-template-columns:4fr 8fr;gap:64px}
+  .xsteps{margin-top:0}
+}

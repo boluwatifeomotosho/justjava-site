@@ -1,0 +1,36 @@
+/* HR and Payroll Platform page */
+.hr-chips{margin-top:28px}
+.hr-chips span{border-color:var(--line-dark);color:var(--muted-dark)}
+.hr-chips span.lic{border-color:var(--maya);color:var(--maya)}
+.hr-act{margin-top:28px}
+.pr{margin-top:36px;display:grid;gap:24px}
+.pr-steps{list-style:none;margin:0;padding:0;display:grid;border-top:1px solid var(--line-dark);counter-reset:s}
+.pr-steps li{counter-increment:s;position:relative;padding:12px 0 12px 36px;border-bottom:1px solid var(--line-dark);font-weight:500;color:var(--muted-dark);transition:color .3s var(--ease);display:grid}
+.pr-steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:14px;font:500 12px/1 var(--mono);color:var(--muted-dark)}
+.pr-steps li small{font-weight:400;font-size:13px;color:var(--muted-dark)}
+.pr-steps li.on{color:var(--paper)}
+.pr-steps li.on::before{color:var(--maya)}
+.pr-steps li.wait{color:#F5B94A}
+.pr-panel{background:var(--ink);border:1px solid var(--line-dark);border-radius:8px;padding:18px;display:grid;gap:14px}
+.pr-top{display:flex;justify-content:space-between;align-items:center}
+.chip.go{background:#15803D;border-color:#15803D;color:#fff}
+.chip.hold{border-color:#F5B94A;color:#F5B94A}
+.pr-emp{display:flex;align-items:baseline;gap:10px}
+.pr-emp b{font-size:40px;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.pr-emp span{color:var(--muted-dark);font-size:14px}
+.pr-bar{height:4px;border-radius:2px;background:var(--line-dark);overflow:hidden}
+.pr-bar i{display:block;height:100%;background:var(--ultra);transform-origin:left;transform:scaleX(0)}
+.pr-tot{margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.pr-tot dt{font-size:12px;color:var(--muted-dark)}
+.pr-tot dd{margin:2px 0 0;font-size:17px;font-weight:500;font-variant-numeric:tabular-nums}
+.pr-approve{height:48px;width:100%}
+.pr-msg{margin:0;font-size:14px;color:var(--muted-dark);min-height:1.4em}
+.hr-body .wrap{display:grid;gap:36px}
+.hr-sec p:not(.eyebrow){margin:0;font-size:18px;line-height:1.55;color:var(--paper);max-width:52ch}
+.hr-own .h2{max-width:14ch}
+.hr-own .copy p{color:var(--muted-light)}
+@media (min-width:900px){
+  .pr{grid-template-columns:1fr 420px;gap:56px;align-items:start}
+  .hr-body .wrap{grid-template-columns:1fr 1fr;gap:56px 64px}
+  .pr-approve{width:auto;padding-inline:24px}
+}

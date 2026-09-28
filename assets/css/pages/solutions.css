@@ -1,0 +1,15 @@
+/* Solutions page */
+.sx{padding-block:8px 96px}
+.sx-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-dark)}
+.sx-list a{position:relative;display:grid;gap:6px;padding:26px 44px 26px 0;border-bottom:1px solid var(--line-dark);text-decoration:none;transition:background .2s var(--ease)}
+.sx-name{font-size:clamp(1.4rem,1.1rem + 1.4vw,2.3rem);font-weight:700;letter-spacing:-.025em;line-height:1.1}
+.sx-line{color:var(--muted-dark);max-width:48ch}
+.sx-in{font:500 12px/1.4 var(--mono);letter-spacing:.04em;color:var(--maya);margin-top:4px}
+.sx-list i{position:absolute;right:4px;top:30px;font-style:normal;font-size:22px;color:var(--muted-dark);transition:transform .2s var(--ease),color .2s var(--ease)}
+.sx-list a:hover i{transform:translateX(6px);color:var(--paper)}
+.sx-list a:hover .sx-name{color:var(--paper)}
+@media (min-width:900px){
+  .sx-list a{grid-template-columns:5fr 5fr 3fr;align-items:baseline;gap:32px;padding:34px 56px 34px 0}
+  .sx-in{margin-top:0}
+  .sx-list i{top:36px}
+}
