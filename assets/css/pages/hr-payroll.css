@@ -34,3 +34,5 @@
   .hr-body .wrap{grid-template-columns:1fr 1fr;gap:56px 64px}
   .pr-approve{width:auto;padding-inline:24px}
 }
+
+.hr-body .wrap{display:block!important}

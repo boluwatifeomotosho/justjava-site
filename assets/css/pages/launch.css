@@ -29,3 +29,5 @@ body.nav-hidden .panel{top:calc(env(safe-area-inset-top,0px) + 8px)}
   .gates.all li::before{background:#15803D;border-color:#15803D}
   .pillar{padding:44px 0}
 }
+
+.pillar .art{margin-top:10px}

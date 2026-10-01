@@ -67,3 +67,5 @@ body.nav-hidden .base-read{top:calc(env(safe-area-inset-top,0px) + 8px)}
   body.nav-hidden .base-read{top:40px}
   .caps{grid-template-columns:1fr 1fr}
 }
+
+.steps .art{margin-top:10px}

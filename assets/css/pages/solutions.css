@@ -13,3 +13,6 @@
   .sx-in{margin-top:0}
   .sx-list i{top:36px}
 }
+
+.sx-vis{grid-row:auto!important;width:100%;max-width:240px;aspect-ratio:16/10!important;margin-bottom:8px}
+@media (min-width:900px){.sx-list a{grid-template-columns:150px 4fr 5fr 3fr;align-items:center}.sx-vis{margin:0;max-width:none}}

@@ -67,3 +67,6 @@ form fieldset:first-child legend{border-top:0;padding-top:4px}
   .live.sent .lv-title h2{-webkit-line-clamp:2}
   .live.sent .lv-title p{display:block}
 }
+
+.next3{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:22px}
+.nx{color:var(--muted-dark);font-size:13px}
